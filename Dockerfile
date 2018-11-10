@@ -30,8 +30,8 @@ RUN apt-get install -y --no-install-recommends \
     && apt-get -y autoremove
 
 # Worksround to install jasper-dev from old Raspi os sources (jessie has this library)
-RUN echo "deb http://mirrordirector.raspbian.org/raspbian jessie main contrib non-free rpi"  | sudo tee -a /etc/apt/sources.list   
-RUN apt-get install libjasper-dev
+#RUN echo "deb http://mirrordirector.raspbian.org/raspbian jessie main contrib non-free rpi"  | sudo tee -a /etc/apt/sources.list   
+#RUN apt-get install libjasper-dev
 
 # OpenCV requires numpy
 RUN pip install --no-cache-dir numpy
