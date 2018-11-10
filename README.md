@@ -108,7 +108,7 @@ To build the image yourself on your Pi, do the following:
 1. First clone the repo on your Raspberry Pi
    
    ```
-   git cl
+   git clone https://github.com/joesan/raspi-motion-detection.git
    ```
 
 2. Next, cd into the cloned repo and run docker build. On my Raspberry Pi, it is as shown below!
