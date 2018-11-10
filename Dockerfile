@@ -1,7 +1,6 @@
-FROM resin/raspberrypi3-python:2.7
-
 ARG RASPBIAN_VERSION=stretch
 FROM resin/rpi-raspbian:$RASPBIAN_VERSION
+
 MAINTAINER Joesan <http://www.inland24.com>
 
 ARG RASPBIAN_VERSION
