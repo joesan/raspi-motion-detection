@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libjpeg-dev libtiff-dev libjasper-dev libpng-dev \
     # to work with videos
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
+    libxvidcore-dev libx264-dev \
     # needed by highgui tool
     libgtk2.0-dev \
     # for opencv math operations
