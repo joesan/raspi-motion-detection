@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM resin/raspberrypi3-python:2.7
 MAINTAINER Joesan <http://www.inland24.com>
 
 # Hack to install libjasper-dev from older Ubuntu sources
