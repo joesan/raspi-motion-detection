@@ -6,7 +6,7 @@ MAINTAINER Joesan <http://www.inland24.com>
 # We need sudo for this work around!
 RUN apt-get update && \
     apt-get -y install sudo
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ yakkety universe" | sudo tee -a /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial universe" | sudo tee -a /etc/apt/sources.list
 RUN sudo apt-get install libjasper-dev
 
 # Install dependencies needed for building and running OpenCV
