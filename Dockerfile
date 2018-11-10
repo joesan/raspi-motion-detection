@@ -3,6 +3,9 @@ MAINTAINER Joesan <http://www.inland24.com>
 
 # Hack to install libjasper-dev from older Ubuntu sources
 # https://stackoverflow.com/questions/43484357/opencv-in-ubuntu-17-04/44488374#44488374
+# We need sudo for this work around!
+RUN apt-get update && \
+    apt-get -y install sudo
 RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ yakkety universe" | sudo tee -a /etc/apt/sources.list
 
 # Install dependencies needed for building and running OpenCV
