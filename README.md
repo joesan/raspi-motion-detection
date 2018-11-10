@@ -76,7 +76,47 @@ If it worked, you should see "Hello from Docker" printed out!
 
 ### Installing Python and OpenCV
 
-This step is fairly simple as you just have to run a Docker image!
+This step is fairly simple as you just have to build or run a Docker image! Yes, you have two choices here!
 
-TODO... documentation....
+Either pull and run the docker image that is already created or use the source Dockerfile and build the image for yourself!
+You have to know that building the image with OpenCV is not a task that is done within minutes. On my Raspberry Pi Model 3 B+, it
+took me about 3 hours to fully build the image. So if you are looking for a quicker install, just grab the docker image 
+from my docker hub repo from [here](https://hub.docker.com/r/joesan/raspi_opencv_3/)
+
+To build the image yourself on your Pi, do the following:
+
+1. First clone the repo on your Raspberry Pi
+   
+   ```
+   git cl
+   ```
+
+2. Next, cd into the cloned repo and run docker build. On my Raspberry Pi, it is as shown below!
+   
+   ```
+   joesan@cctv:~/projects/raspi-motion-detection $ docker build -t joesan/raspi_opencv_3 .
+   ```
+   
+   If you have any other activities planned, just go ahead and complete them as the command above is going to take
+   at least a minimum of 3 hours to complete!
+   
+3. Once complete, you can check for the image using the docker images command. Here is what I have on my Raspberry Pi
+   
+   ```
+   joesan@cctv:~/projects/raspi-motion-detection $ docker images
+   REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+   joesan/raspi_opencv_3   latest              1c8720385ec7        2 hours ago         916MB
+   resin/rpi-raspbian      stretch             21dc8fc1377f        2 weeks ago         139MB
+   ```
+   
+4. To test if your image is working properly, issue the following command to run the image! Here we are just going to
+   print the OpenCV version
+   
+   ```
+   joesan@cctv:~/projects/raspi-motion-detection $ docker run -it joesan/raspi_opencv_3 python -c "import cv2; print(cv2.__version__)"
+   3.3.1
+   ```   
+   
+
+   
 
