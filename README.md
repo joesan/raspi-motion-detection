@@ -31,8 +31,28 @@ has a built in WiFi module). Do the following:
    }
    ```
 6. I normally prefer to change the default user and password to something to my liking! You can skip
-this step if you wish to work with the defaults!
+this step if you wish to work with the defaults! If in case, you wish to change the default user and password
+do the following steps:
 
+   Enable root login by giving the following command
+    ```
+    sudo passwd root
+    ```
+   Logout of the pi user
+    ```
+    logout
+    ```
+   Now Login back in as the user 'root' using the password you just created. Now we can change the default user
+    for the raspberry pi using the following command
+    ```
+    usermod -l newusername pi
+    ```
+   Now we have to also change the user's default home directory to reflect this new user! The command below should do that
+   ```
+   usermod -m -d /home/newusername newusername
+   ```
+   Logout and Login again with this new user and change the password for this new user! That's it!
+    
 ### Set up Docker in Raspberry Pi
 
 Since all installations (Python, OpenCV) here are encapsulated in a Dockerfile,
