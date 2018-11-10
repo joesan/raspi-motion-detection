@@ -6,9 +6,7 @@ MAINTAINER Joesan <http://www.inland24.com>
 # We need sudo for this work around!
 RUN apt-get update && \
     apt-get -y install sudo
-# RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ yakkety universe" | sudo tee -a /etc/apt/sources.list
-RUN sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
-RUN sudo apt-get update
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ yakkety universe" | sudo tee -a /etc/apt/sources.list
 RUN sudo apt-get install libjasper-dev
 
 # Install dependencies needed for building and running OpenCV
@@ -17,7 +15,7 @@ RUN apt-get install -y --no-install-recommends \
     unzip \
     build-essential cmake pkg-config \
     # to work with images
-    libjpeg-dev libtiff-dev libjasper-dev libpng-dev \
+    libjpeg-dev libtiff-dev libpng-dev \
     # to work with videos
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
     libxvidcore-dev libx264-dev \
