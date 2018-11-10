@@ -4,10 +4,10 @@ MAINTAINER Joesan <http://www.inland24.com>
 # Hack to install libjasper-dev from older Ubuntu sources
 # https://stackoverflow.com/questions/43484357/opencv-in-ubuntu-17-04/44488374#44488374
 # We need sudo for this work around!
-RUN apt-get update && \
-    apt-get -y install sudo
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial universe" | sudo tee -a /etc/apt/sources.list
-RUN sudo apt-get install libjasper-dev
+#RUN apt-get update && \
+ #   apt-get -y install sudo
+#RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial universe" | sudo tee -a /etc/apt/sources.list
+#RUN sudo apt-get install libjasper-dev
 
 # Install dependencies needed for building and running OpenCV
 RUN apt-get install -y --no-install-recommends \
@@ -17,7 +17,7 @@ RUN apt-get install -y --no-install-recommends \
     # to work with images
     libjpeg-dev libtiff-dev libpng-dev \
     # to work with videos
-    libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
+    libavcodec-dev libavformat-dev libjasper-dev libswscale-dev libv4l-dev \
     libxvidcore-dev libx264-dev \
     # needed by highgui tool
     libgtk2.0-dev \
