@@ -1,10 +1,11 @@
+'''
 # import the necessary packages
-from core.tempimage import TempImage
-from picamera.array import PiRGBArray
-from picamera import PiCamera
-import argparse
-import warnings
-import datetime
+# from core.tempimage import TempImage
+# from picamera.array import PiRGBArray
+# from picamera import PiCamera
+# import argparse
+# import warnings
+# import datetime
 import dropbox
 import imutils
 import json
@@ -146,3 +147,14 @@ def init_picamera_and_detect_motion():
 
         # clear the stream in preparation for the next frame
         raw_capture.truncate(0)
+'''
+
+import argparse
+
+ap = argparse.ArgumentParser()
+ap.add_argument("-c", "--conf", required=True,
+                help="path to the JSON configuration file")
+args = vars(ap.parse_args())
+
+print("Ok I'm called by running a Docker command ..... voila!....")
+print(args)
