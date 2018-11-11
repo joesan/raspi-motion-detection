@@ -1,0 +1,13 @@
+{
+	"show_video": true,
+	"use_dropbox": true,
+	"dropbox_access_token": "YOUR_DROPBOX_KEY",
+	"dropbox_base_path": "YOUR_DROPBOX_PATH",
+	"min_upload_seconds": 3.0,
+	"min_motion_frames": 8,
+	"camera_warmup_time": 2.5,
+	"delta_thresh": 5,
+	"resolution": [640, 480],
+	"fps": 16,
+	"min_area": 5000
+}
