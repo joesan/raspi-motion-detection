@@ -5,7 +5,7 @@ To build the Docker image for the motion detector Python scripts, do the followi
 1. Change directors into the raspi-motion-detection/project directory and run the following command
 
   ```
-  docker build -t joesan/dummy
+  docker build -t joesan/motion_detector
   ```
   
   Choose your desired name for the image!
@@ -13,7 +13,7 @@ To build the Docker image for the motion detector Python scripts, do the followi
 2. Once the build is successful, you can run it using the command:
 
   ```
-  docker run joesan/dummy
+  docker run joesan/motion_detector
   ``` 
   
 You have to note that the Docker image for the motion detector python depends on another image which
