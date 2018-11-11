@@ -3,6 +3,7 @@ FROM     joesan/raspi_opencv_3:latest
 #FROM     jfloff/alpine-python
 # We need Dropbox client SDK
 RUN      pip install --upgrade dropbox
+RUN      pip install "picamera[array]"
 RUN      mkdir -p /raspi_motion_detection/project
 WORKDIR  /raspi_motion_detection/project
 COPY     ./ $WORKDIR/
