@@ -9,4 +9,4 @@ WORKDIR  /raspi_motion_detection/project
 COPY     ./ $WORKDIR/
 COPY     ./requirements.txt $WORKDIR/
 ADD      . $WORKDIR
-CMD      ["sudo python", "core/motion_detector.py", "--conf", "conf/conf.json"]
+CMD      ["DISPLAY=:0 sudo python", "core/motion_detector.py", "--conf", "conf/conf.json"]
