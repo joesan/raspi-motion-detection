@@ -75,8 +75,10 @@ for f in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True
     cv2.accumulateWeighted(gray, avg, 0.5)
     frameDelta = cv2.absdiff(gray, cv2.convertScaleAbs(avg))
 
-    # threshold the delta image, dilate the thresholded image to fill
-    # in holes, then find contours on thresholded image
+    print("[INFO] calculated frame delta")
+
+    # threshold the delta image, dilate the threshold image to fill
+    # in holes, then find contours on threshold image
     thresh = cv2.threshold(frameDelta, conf["delta_thresh"], 255,
                            cv2.THRESH_BINARY)[1]
     thresh = cv2.dilate(thresh, None, iterations=2)
@@ -113,13 +115,13 @@ for f in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True
             # check to see if the number of frames with consistent motion is
             # high enough
             if motionCounter >= conf["min_motion_frames"]:
-                # check to see if dropbox sohuld be used
+                # check to see if dropbox should be used
                 if conf["use_dropbox"]:
                     # write the image to temporary file
                     t = TempImage()
                     cv2.imwrite(t.path, frame)
 
-                    # upload the image to Dropbox and cleanup the tempory image
+                    # upload the image to Dropbox and cleanup the temporary image
                     print("[UPLOAD] {}".format(ts))
                     path = "/{base_path}/{timestamp}.jpg".format(
                         base_path=conf["dropbox_base_path"], timestamp=ts)
