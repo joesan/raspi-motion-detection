@@ -14,4 +14,4 @@ COPY     ./ $WORKDIR/
 COPY     ./requirements.txt $WORKDIR/
 ADD      . $WORKDIR
 CMD      xclock
-CMD      ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
+#CMD      ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
