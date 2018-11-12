@@ -5,6 +5,8 @@ FROM     joesan/raspi_opencv_3:latest
 RUN      pip install --upgrade dropbox
 RUN      pip install "picamera[array]"
 RUN      apt-get update
+RUN      sudo apt-get install --no-install-recommends xserver-xorg
+RUN      sudo apt-get install --no-install-recommends xinit
 RUN      apt-get install -qqy x11-apps
 RUN      mkdir -p /raspi_motion_detection/project
 WORKDIR  /raspi_motion_detection/project
