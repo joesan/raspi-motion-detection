@@ -103,6 +103,26 @@ You have to know that building the image with OpenCV is not a task that is done 
 took me about 3 hours to fully build the image. So if you are looking for a quicker install, just grab the docker image 
 from my docker hub repo from [here](https://hub.docker.com/r/joesan/raspi_opencv_3/)
 
+TODO: Documentation.... you probably need to first have the following components with you!
+
+1. A Raspberry Pi - I prefer to use the Model 3 B+ that has a built in WiFi
+
+2. A Pi Camera - I got the Raspberry Pi v2.1, 8 MP NoIR camera as this one can take pictures in the dark
+provided it has an IR filters
+
+3. A proper case to protect the Pi and the camera. If you are going to mount the setup outdoors, you might
+want to consider the following:
+
+   3.1 How are you going to get WiFi coverage at the outdoor location
+   3.2 How are you going to get the Power supply to the Pi
+   3.3 Would the case tolerate harsh weather conditions
+ 
+Once everything is assembled, check if the camera is working using the following command on your Pi
+
+    ```
+    raspistill -o output.jpg
+    ```
+
 To build the image yourself on your Pi, do the following:
 
 1. First clone the repo on your Raspberry Pi
