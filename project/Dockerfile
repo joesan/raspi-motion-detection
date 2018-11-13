@@ -8,6 +8,10 @@ RUN      apt-get update
 RUN      sudo apt-get install --no-install-recommends xserver-xorg
 RUN      sudo apt-get install --no-install-recommends xinit
 RUN      apt-get install -qqy x11-apps
+# Let's start the XServer
+RUN      startx
+# Window Manager needs to be installed
+RUN      sudo apt-get install lxde-core lxappearance
 RUN      mkdir -p /raspi_motion_detection/project
 WORKDIR  /raspi_motion_detection/project
 COPY     ./ $WORKDIR/

@@ -15,7 +15,14 @@ To build the Docker image for the motion detector Python scripts, do the followi
   ```
   docker run -ti --device=/dev/vcsm \
     --device=/dev/vchiq \
-    -e DISPLAY=$DISPLAY \
+    -e DISPLAY=$DISPLAY:0 \
+    -e XAUTHORITY=/.Xauthority \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    joesan/motion_detector
+    
+  docker run -ti --device=/dev/vcsm \
+    --device=/dev/vchiq \
+    -e DISPLAY=$DISPLAY:0 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     joesan/motion_detector
     
