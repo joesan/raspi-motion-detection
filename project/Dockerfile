@@ -5,11 +5,6 @@ FROM     joesan/raspi_opencv_3:latest
 RUN      pip install --upgrade dropbox
 RUN      pip install "picamera[array]"
 RUN      apt-get update
-RUN      sudo apt-get install --no-install-recommends xserver-xorg
-RUN      sudo apt-get install --no-install-recommends xinit
-RUN      apt-get install -qqy x11-apps
-# Let's start the XServer
-RUN      startx
 # Window Manager needs to be installed
 RUN      sudo apt-get install lxde-core lxappearance
 RUN      mkdir -p /raspi_motion_detection/project
@@ -17,5 +12,4 @@ WORKDIR  /raspi_motion_detection/project
 COPY     ./ $WORKDIR/
 COPY     ./requirements.txt $WORKDIR/
 ADD      . $WORKDIR
-CMD      xclock
 #CMD      ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
