@@ -32,7 +32,7 @@ To build the image yourself on your Pi, do the following:
    If you have any other activities planned, just go ahead and complete them as the command above is going to take
    at least a minimum of 3 hours to complete!
    
-3. Once complete, you can check for the image using the docker images command. Here is what I have on my Raspberry Pi
+3. Once complete, you can check for the image using the docker images command. Here is what I have on my Pi!
    
    ```
    joesan@cctv:~/projects/raspi-motion-detection $ docker images
