@@ -8,11 +8,11 @@ RUN        pip install "picamera[array]"
 # Install xauth for cookie and xserver display routing
 RUN        sudo apt-get install xauth
 # Prepare the target folders in the Docker container
-RUN        mkdir -p /var/raspi_motion_detection/project
-WORKDIR    /var/raspi_motion_detection/project
-COPY       ./ $WORKDIR/
-COPY       xauth_script.sh $WORKDIR/
-#ADD        . $WORKDIR
+RUN        mkdir -p /var/raspi_motion_detection/project/
+WORKDIR    /var/raspi_motion_detection/project/
+COPY       ./ $WORKDIR
+COPY       run.bash $WORKDIR
+ADD        . $WORKDIR
 # Perform xauth authentication for the xserver display routing
 CMD [ "/bin/bash", "/var/raspi_motion_detection/project/run.bash"]
 #CMD        ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
