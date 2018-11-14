@@ -49,4 +49,6 @@ To build the image yourself on your Pi, do the following:
    3.3.1
    ``` 
 
-Like I said earlier, building OpenCV is a lengthy process and requires shit loads of time. I have already done this and if you are just interested in getting a pre-built image that is guaranteed to work, then you can download it from [here]!(https://hub.docker.com/r/joesan/raspi_opencv_3/)
+Like I said earlier, building OpenCV is a lengthy process and requires shit loads of time. I have already done this and if you are just interested in getting a pre-built image that is guaranteed to work, then you can download it from [here](https://hub.docker.com/r/joesan/raspi_opencv_3/)
+
+Ok, so you now have the OpenCV image, then proceed to runnning the actual project. Gead on to [here](https://github.com/joesan/raspi-motion-detection/tree/master/project)
