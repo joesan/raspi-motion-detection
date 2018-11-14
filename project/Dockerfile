@@ -7,12 +7,12 @@ RUN        pip install --upgrade dropbox
 RUN        pip install "picamera[array]"
 # Install xauth for cookie and xserver display routing
 RUN        sudo apt-get install xauth
-RUN        mkdir -p /raspi_motion_detection/project
-WORKDIR    /raspi_motion_detection/project
+# Prepare the target folders in the Docker container
+RUN        mkdir -p /opt/raspi_motion_detection/project
+WORKDIR    /opt/raspi_motion_detection/project
 COPY       ./ $WORKDIR/
 COPY       xauth_script.sh $WORKDIR/
-ADD        . $WORKDIR
-RUN        CD $WORKDIR
+#ADD        . $WORKDIR
 # Perform xauth authentication for the xserver display routing
-ENTRYPOINT [ "/bin/bash", "xauth_script.sh"]
-CMD        ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
+CMD [ "/bin/bash", "/opt/raspi_motion_detection/project/xauth_script.sh"]
+#CMD        ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
