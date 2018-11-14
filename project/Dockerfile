@@ -14,5 +14,5 @@ COPY       ./requirements.txt $WORKDIR/
 COPY       ./xauth_script.sh $WORKDIR/
 ADD        . $WORKDIR
 # Perform xauth authentication for the xserver display routing
-ENTRYPOINT [ "sh", "-c", "xauth_script.sh"]
+ENTRYPOINT [ "sudo sh", "-c", "xauth_script.sh"]
 CMD        ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
