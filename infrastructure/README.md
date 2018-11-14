@@ -7,14 +7,13 @@ A few things to note before you proceed with the build:
 
 1. A minimum of 16GB or more SD card is needed. I would however recommend to use a 32 GB SD card.
 
-2. Increase the swap size on your Pi. To do this edit the /etc/dphys-swapfile file and set the CONF_SWAPFACTOR=1 and
-   ONF_MAXSWAP=2048. Without this the RasPi will run our of RAM space and your Docker build will 
-   freeze when it is around 86%
+2. Increase the swap size on your Pi. To do this edit the /etc/dphys-swapfile file and set the <mark>CONF_SWAPFACTOR=1</mark> and <mark>ONF_MAXSWAP=2048</mark>. Without this the RasPi will run our of RAM space and your Docker build will 
+freeze when it is around 86%
    
 3. We will build our Docker image for the Raspbian Stretch OS
 
 4. In the Dockerfile when we run the make command to build OpenCV source files, make sure to have the number of
-   cores set to 1. For example., in the Dockerfile (line number 68), I have it set t a single core 	&& make -j1   
+   cores set to 1. For example., in the Dockerfile (line number 68), I have it set t a single core <mark>&& make -j1</mark> 
 
 To build the image yourself on your Pi, do the following:
 
