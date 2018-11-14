@@ -13,7 +13,7 @@ freeze when it is around 86%
 3. We will build our Docker image for the Raspbian Stretch OS
 
 4. In the Dockerfile when we run the make command to build OpenCV source files, make sure to have the number of
-   cores set to 1. For example., in the Dockerfile (line number 68), I have it set t a single core ```&& make -j1``` 
+   cores set to 1. For example., in the Dockerfile (line number 68), I have it set to a single core ```&& make -j1```. If you    would like to try it with more cores (say 4), you can set it as ```&& make -j4``` but with j4 as an option, my build          stopped after it reached 86%. So leave it at 1!
 
 To build the image yourself on your Pi, do the following:
 
@@ -51,4 +51,4 @@ To build the image yourself on your Pi, do the following:
 
 Like I said earlier, building OpenCV is a lengthy process and requires shit loads of time. I have already done this and if you are just interested in getting a pre-built image that is guaranteed to work, then you can download it from [here](https://hub.docker.com/r/joesan/raspi_opencv_3/)
 
-Ok, so you now have the OpenCV image, then proceed to runnning the actual project. Gead on to [here](https://github.com/joesan/raspi-motion-detection/tree/master/project)
+Ok, so you now have the OpenCV image, then proceed to runnning the actual project over [here](https://github.com/joesan/raspi-motion-detection/tree/master/project)
