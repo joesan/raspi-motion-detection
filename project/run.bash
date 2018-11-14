@@ -1,8 +1,6 @@
 #!/bin/bash
-CONTAINER_DISPLAY='0'
-CONTAINER_HOSTNAME='cctv'
-echo $DISPLAY
-echo $(xauth list)
+
+HOST='cctv'
 # Get the DISPLAY slot
 DISPLAY_NUMBER=$(echo $DISPLAY | cut -d. -f1 | cut -d: -f2)
 # Extract current authentication cookie
@@ -11,8 +9,8 @@ sudo su root
 rm -Rf /root/.Xauthority
 touch /root/.Xauthority
 # Add the xauth cookie
-xauth -f /root/.Xauthority add ${CONTAINER_HOSTNAME}/unix:${CONTAINER_DISPLAY} MIT-MAGIC-COOKIE-1 ${AUTH_COOKIE}
+xauth -f /root/.Xauthority add ${HOST}/unix:${DISPLAY_NUMBER} MIT-MAGIC-COOKIE-1 ${AUTH_COOKIE}
 # Copy the xauth file to the root
 cp /home/joesan/.Xauthority  /root/
 chmod 777 /root/
-python /opvart/raspi_motion_detection/project/core/motion_detector.py --conf conf/conf.json
+python /var/raspi_motion_detection/project/core/motion_detector.py --conf conf/conf.json

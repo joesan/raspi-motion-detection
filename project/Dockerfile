@@ -14,5 +14,5 @@ COPY       ./ $WORKDIR
 COPY       run2.bash $WORKDIR
 ADD        . $WORKDIR
 # Perform xauth authentication for the xserver display routing
-CMD [ "/bin/bash", "/var/raspi_motion_detection/project/run2.bash"]
+CMD [ "/bin/bash", "/var/raspi_motion_detection/project/run.bash"]
 #CMD        ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
