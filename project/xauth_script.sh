@@ -15,4 +15,4 @@ xauth -f /root/.Xauthority add ${CONTAINER_HOSTNAME}/unix:${CONTAINER_DISPLAY} M
 # Copy the xauth file to the root
 cp /home/joesan/.Xauthority  /root/
 chmod 777 /root/
-python /opt/raspi_motion_detection/project/core/motion_detector.py --conf conf/conf.json
+python /opvart/raspi_motion_detection/project/core/motion_detector.py --conf conf/conf.json
