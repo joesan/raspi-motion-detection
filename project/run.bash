@@ -9,7 +9,7 @@ sudo su root
 rm -Rf /root/.Xauthority
 touch /root/.Xauthority
 # Add the xauth cookie
-xauth -f /root/.Xauthority add ${HOST}/unix:${DISPLAY_NUMBER} MIT-MAGIC-COOKIE-1 ${AUTH_COOKIE}
+xauth -fv /root/.Xauthority add ${HOST}/unix:${DISPLAY_NUMBER} MIT-MAGIC-COOKIE-1 ${AUTH_COOKIE}
 # Copy the xauth file to the root
 cp /home/joesan/.Xauthority  /root/
 chmod 777 /root/
