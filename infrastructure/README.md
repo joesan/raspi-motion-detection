@@ -48,3 +48,5 @@ To build the image yourself on your Pi, do the following:
    joesan@cctv:~/projects/raspi-motion-detection $ docker run -it joesan/raspi_opencv_3 python -c "import cv2; print(cv2.__version__)"
    3.3.1
    ``` 
+
+Like I said earlier, building OpenCV is a lengthy process and requires shit loads of time. I have already done this and if you are just interested in getting a pre-built image that is guaranteed to work, then you can download it from [here]!(https://hub.docker.com/r/joesan/raspi_opencv_3/)
