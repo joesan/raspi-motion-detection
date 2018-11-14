@@ -10,9 +10,9 @@ RUN        sudo apt-get install xauth
 RUN        mkdir -p /raspi_motion_detection/project
 WORKDIR    /raspi_motion_detection/project
 COPY       ./ $WORKDIR/
-COPY       ./requirements.txt $WORKDIR/
-COPY       ./xauth_script.sh $WORKDIR/
+COPY       xauth_script.sh $WORKDIR/
 ADD        . $WORKDIR
+RUN        CD $WORKDIR
 # Perform xauth authentication for the xserver display routing
-ENTRYPOINT [ "sudo sh", "-c", "xauth_script.sh"]
+ENTRYPOINT [ "/bin/bash", "xauth_script.sh"]
 CMD        ["python", "core/motion_detector.py", "--conf", "conf/conf.json"]
