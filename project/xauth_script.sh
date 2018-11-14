@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 CONTAINER_DISPLAY='0'
 CONTAINER_HOSTNAME='cctv'
