@@ -11,7 +11,7 @@ RUN        sudo apt-get install xauth
 RUN        mkdir -p /var/raspi_motion_detection/project/
 WORKDIR    /var/raspi_motion_detection/project/
 COPY       ./ $WORKDIR
-COPY       run2.bash $WORKDIR
+COPY       run.bash $WORKDIR
 ADD        . $WORKDIR
 # Perform xauth authentication for the xserver display routing
 CMD [ "/bin/bash", "/var/raspi_motion_detection/project/run.bash"]
