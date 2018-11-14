@@ -13,4 +13,4 @@ AUTH_COOKIE=$(xauth list | grep "^$(hostname)/unix:${DISPLAY_NUMBER} " | awk '{p
 xauth add ${CONTAINER_HOSTNAME}/unix:${CONTAINER_DISPLAY} MIT-MAGIC-COOKIE-1 ${AUTH_COOKIE}
 
 # Copy the xauth file to the root
-sudo cp /home/user/.Xauthority   /root/
+sudo cp /home/joesan/.Xauthority  /root/
