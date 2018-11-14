@@ -39,7 +39,9 @@ a look [here](https://github.com/joesan/raspi-motion-detection/tree/master/infra
 This one works
 --------------
 
-docker run -it --net=host --device=/dev/vcsm --device=/dev/vchiq --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY -v /tmp/.X11-unix joesan/motion_detector bash
+docker run -it --net=host --device=/dev/vcsm --device=/dev/vchiq --volume="/home/joesan/.Xauthority:/root/.Xauthority:rw" -e DISPLAY -v /tmp/.X11-unix joesan/motion_detector bash
+
+docker run -it --net=host --device=/dev/vcsm --device=/dev/vchiq -e DISPLAY -v /tmp/.X11-unix joesan/motion_detector
 
 install xauth first and then add the cookie and then run the command below!!!!
     
