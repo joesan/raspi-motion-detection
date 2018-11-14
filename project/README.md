@@ -24,8 +24,8 @@ To build the Docker image for the motion detector Python scripts, do the followi
   
   A few things to note here:
   
-  2.1 To access the Raspberry Pi Camera you need to allow access to the vcsm and vchiq devices which is what you do with the --devices option
-      from the command above
+  2.1 To access the Raspberry Pi Camera you need to allow access to the vcsm and vchiq devices which is what you do with the --devices option from the command above
+  
   2.2 You need to have a proper xauth file and attach it to the root which is what you do with the --volume option
       from the command above (Have a look in the motion_detector.bash to find out how we create the .Xauthority file based on the DISPLAY parameter)    
   
