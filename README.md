@@ -3,10 +3,7 @@
 
 Saying thanks to [pyimagesearch](https://www.pyimagesearch.com) for the excellent tutorial and the majorirty of the Python scripts!
 
-This is the very first step as you need to prepare the SD card
-with the raspberry operating system. We wil use [Etcher](https://www.balena.io/etcher/https://www.balena.io/etcher/)
-for this purpose. Just download Etcher for your operating system and follow
-the steps below:
+This is the very first step as you need to prepare the SD card with the raspberry operating system. We wil use [Etcher](https://www.balena.io/etcher/https://www.balena.io/etcher/) for this purpose. Just download Etcher for your operating system and follow the steps below:
 
 1. Format the SD card! You should know how to do this!
 2. Head on to the Raspberry website and download the latest version
@@ -101,24 +98,28 @@ If it worked, you should see "Hello from Docker" printed out!
 This step is fairly simple as you just have to build or run a Docker image! Yes, you have two choices here!
 
 Either pull and run the docker image that is already created or use the source Dockerfile and build the image for yourself!
-You have to know that building the image with OpenCV is not a task that is done within minutes. On my Raspberry Pi Model 3 B+, it
-took me about 3 hours to fully build the image. So if you are looking for a quicker install, just grab the docker image 
+You have to know that building the image with OpenCV is not a task that is done within minutes. On my Raspberry Pi Model 3 B+, it took me about 3 hours to fully build the image. So if you are looking for a quicker install, just grab the docker image 
 from my docker hub repo from [here](https://hub.docker.com/r/joesan/raspi_opencv_3/)
 
-TODO: Documentation.... you probably need to first have the following components with you!
+You probably need to first have the following components with you!
 
 1. A Raspberry Pi - I prefer to use the Model 3 B+ that has a built in WiFi
 
 2. A Pi Camera - I got the Raspberry Pi v2.1, 8 MP NoIR camera as this one can take pictures in the dark
 provided it has an IR filters
 
-3. A proper case to protect the Pi and the camera. If you are going to mount the setup outdoors, you might
-want to consider the following:
+3. A proper case to protect the Pi and the camera. I ordered a RasPi camera case from ModmyPi. If you are going to mount the setup outdoors, you might also want to consider the following factors:
 
    3.1 How are you going to get WiFi coverage at the outdoor location
    3.2 How are you going to get the Power supply to the Pi
    3.3 Would the case tolerate harsh weather conditions
  
+So for me, it was just going to be mounted indoors. So I should be fine with the ModMyPi case for now!
+
+Here is a snapshot of my Pi assembled with the camera!
+
+![alt text](https://github.com/joesan/raspi-motion-detection/blob/master/infrastructure/RasPiWithCameraCase.JPG, "ModMyPiCameraCase")
+
 Once everything is assembled, check if the camera is working using the following command on your Pi
 
     ```
