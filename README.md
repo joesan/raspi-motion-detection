@@ -119,7 +119,7 @@ So for me, it was just going to be mounted indoors. So I should be fine with the
 Here is a snapshot of my Pi assembled with the camera!
 
 ![alt text](
-        raspi-motion-detection/infrastructure/RasPiWithCameraCase.JPG
+        https://github.com/joesan/raspi-motion-detection/infrastructure/RasPiWithCameraCase.JPG
       , "ModMyPiCameraCase")
 
 Once everything is assembled, check if the camera is working using the following command on your Pi
