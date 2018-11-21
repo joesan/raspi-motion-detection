@@ -116,7 +116,7 @@ provided it has an IR filters
  
 So for me, it was just going to be mounted indoors. So I should be fine with the ModMyPi case for now!
 
-Here is a snapshot of my Pi assembled with the camera!
+Here is a snapshot of my Pi assembled with the camera! Note that I have a PIR sensor as well, but I'm not using it for the moment!
 
 ![RaspPi](https://github.com/joesan/raspi-motion-detection/blob/master/infrastructure/RasPiWithCameraCase.png)
 
