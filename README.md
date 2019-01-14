@@ -1,8 +1,6 @@
 
 ### Setting up your Raspberry Pi (Assume Pi 3 Model B+)
 
-Saying thanks to [pyimagesearch](https://www.pyimagesearch.com) for the excellent tutorial and the majorirty of the Python scripts!
-
 This is the very first step as you need to prepare the SD card with the raspberry operating system. We wil use [Etcher](https://www.balena.io/etcher/https://www.balena.io/etcher/) for this purpose. Just download Etcher for your operating system and follow the steps below:
 
 1. Format the SD card! You should know how to do this!
