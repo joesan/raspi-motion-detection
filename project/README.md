@@ -33,3 +33,5 @@ You have to note that the Docker image for the motion detector python depends on
 contains all the needed OpenCV installed in it and optimised for working on the Raspberry Pi. Please have
 a look [here](https://github.com/joesan/raspi-motion-detection/tree/master/infrastructure) for the OpenCV Dockerfile 
 and [here](https://hub.docker.com/r/joesan/raspi_opencv_3/) for the image that you can just use out of the box!
+
+Finally saying thanks to [pyimagesearch](https://www.pyimagesearch.com) for the excellent tutorial and the majorirty of the Python scripts!
