@@ -1,7 +1,7 @@
 ## Build Docker image for OpenCV and Raspberry Pi
 
 You probably do not want to build this by yourself! It is very time consuming! But if you insist, you can do so! Just 
-follow along!
+follow along! I messed it up onc time and I lost about 5 hours! So be prepared to invest at least 6 hours to build your image!
 
 A few things to note before you proceed with the build:
 
