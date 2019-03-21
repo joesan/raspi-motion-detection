@@ -1,6 +1,8 @@
 
 ### Setting up your Raspberry Pi (Assume Pi 3 Model B+)
 
+All the steps below are performed on a Mac, but it should work with any OS of your choice!
+
 This is the very first step as you need to prepare the SD card with the raspberry operating system. We wil use [Etcher](https://www.balena.io/etcher/https://www.balena.io/etcher/) for this purpose. Just download Etcher for your operating system and follow the steps below:
 
 1. Format the SD card! You should know how to do this!
