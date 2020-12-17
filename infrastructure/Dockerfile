@@ -1,7 +1,7 @@
 ARG RASPBIAN_VERSION=stretch
 FROM resin/rpi-raspbian:$RASPBIAN_VERSION
 
-MAINTAINER Joesan <http://www.inland24.com>
+MAINTAINER Joesan <https://www.bigelectrons.com>
 
 ARG RASPBIAN_VERSION
 ARG DEBIAN_FRONTEND=noninteractive
