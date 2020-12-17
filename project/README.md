@@ -8,7 +8,11 @@ To build the Docker image for the motion detector Python scripts, do the followi
   docker build -t joesan/motion_detector .
   ```
   
-  Choose your desired name for the image!
+  Choose your desired name for the image! You do not have to build it by your own. I have an image that you can download from here: 
+  
+   ```
+  docker pull joesan/raspi_opencv_3:latest
+   ```
   
 2. Once the build is successful, you can run it using the command:
 
