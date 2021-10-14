@@ -126,5 +126,5 @@ Once everything is assembled, check if the camera is working using the following
     raspistill -o output.jpg
     ```
 
-Ok! So if you are thus far here, then proceed to building your OpenCV Docker image. Have a look [here](https://github.com/joesan/raspi-motion-detection/tree/master/infrastructure)
+Ok! So if you are thus far here, then proceed to building your OpenCV Docker image. Click [here](https://github.com/joesan/raspi-motion-detection/tree/master/infrastructure) for the instructions.
 
